@@ -1,5 +1,4 @@
-import os, argparse
-
+import os
 import tensorflow as tf
 from tensorflow.python.framework import graph_util
 
@@ -9,9 +8,7 @@ tf.flags.DEFINE_string("output_node_names", "",
 tf.flags.DEFINE_string("model_folder", "",
                        "Folder to read saved model from.")
 tf.flags.DEFINE_string("output_file", "frozen_model.pb",
-                       "File to write serialized pb.")
-
-dir = os.path.dirname(os.path.realpath(__file__))
+                       "File to write serialized pb, in --model_folder.")
 
 def freeze_graph():
     # We retrieve our checkpoint fullpath
