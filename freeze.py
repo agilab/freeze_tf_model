@@ -17,7 +17,7 @@ def freeze_graph():
     
     # We precise the file fullname of our freezed graph
     absolute_model_folder = "/".join(input_checkpoint.split('/')[:-1])
-    output_graph = absolute_model_folder + FLAGS.output_file 
+    output_graph = absolute_model_folder + "/" + FLAGS.output_file 
 
     # We clear devices to allow TensorFlow to control on which device it will load operations
     clear_devices = True
